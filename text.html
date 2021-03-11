@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src=""></script>
+    <style>
+        .box {
+            border: 1px #000 solid;
+            overflow: hidden;
+        }
+        
+        .a3,
+        .b3 {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: aqua;
+        }
+        
+        .c3 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="a3">3333</div>
+        <div class="b3"> 123</div>
+        <div class="c3"></div>
+    </div>
+</body>
+<!-- <script>
+    var boxobj = document.querySelector(".box");
+    boxobj.addEventListener("touchstart", function() {
+        boxobj.style.background = "red";
+    });
+    boxobj.addEventListener("touchmove", function() {
+        boxobj.style.background = "skyblue";
+    });
+    boxobj.addEventListener("touchcancel", function() {
+        alert("2222222222");
+        // boxobj.style.background = "skyblue";
+    });
+</script> -->
+
+
+<script src="./js/zepto.min.js"></script>
+<script>
+    $.post('http://192.168.1.53:3000/users', {
+        type: 'login',
+        phone: '13545678956',
+        pass: '123456'
+    }, function(re) {
+        console.log(re);
+    })
+</script>
+
+</html>
